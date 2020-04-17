@@ -1,0 +1,220 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family:"微软雅黑";
+    color:#14191e;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:link,a:visited{
+    color:#5e5e5e;
+}
+
+@font-face{
+    font-family:"iconfont";
+    src:url('../img/font/iconfont.eot');
+    src:url('../img/font/iconfont.eot')          format('embedded-opentype'),
+        url('../img/font/iconfont.woff')         format('woff'),
+        url('../img/font/iconfont.ttf')          format('truetype'),
+        url('../img/font/iconfont.svg#iconfont') format('svg');
+}
+
+.main{
+    width:1200px;
+    height:460px;
+    margin:30px auto;
+    position:relative;
+}
+
+/* 焦点图 */
+.banner{
+    width:1200px;
+    height:460px;
+    overflow:hidden;
+}
+
+/* 焦点图通用属性 */
+.banner-slide{
+    width:1200px;
+    height:460px;
+    float:left;
+    overflow:hidden;
+    background-repeat:no-repeat;
+}
+
+/* 焦点图图片 */
+.slide1{
+    background-image:url(../img/bg1.jpg);
+}
+
+.slide2{
+    background-image:url(../img/bg2.jpg);
+}
+
+.slide3{
+    background-image:url(../img/bg3.jpg);
+}
+
+/* 前进后退按钮 */
+.button{
+    position:absolute;
+    width:40px;
+    height:80px;
+    left:244px;
+    top:50%;
+    margin-top:-40px;
+    background:url(../img/arrow.png) center center no-repeat;
+    transform:rotate(180deg);
+}
+
+.next{
+    left:auto;
+    right:0;
+    transform:rotate(0deg);
+}
+
+/* 圆点按钮 */
+.dots{
+    position:absolute;
+    right:24px;
+    bottom:24px;
+    line-height:12px;
+}
+
+.dots span{
+    display:inline-block;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background-color:rgba(7,17,27,0.4);
+    margin-left:8px;
+    box-shadow:0 0 0 2px rgba(255,255,255,0.8) inset;
+    cursor:pointer;
+}
+
+/* 圆点正在活动按钮 */
+.dots span.active{
+    background-color:#fff;
+    box-shadow:0 0 0 2px rgba(7,17,27,0.4) inset;
+}
+
+/* 左侧菜单 */
+.menu-box{
+    position:absolute;
+    left:0;
+    top:0;
+    width:244px;
+    height:460px;
+    background:rgba(7,17,27,0.2);
+    z-index:1;
+}
+
+/* 内容主菜单 相同且定位于左侧菜单 */
+.menu-content{
+    position:absolute;
+    left:0;
+    top:0;
+    width:244px;
+    height:460px;
+    z-index:2;
+}
+
+/* 内容栏目 */
+.menu-item{
+    height:64px;
+    line-height:64px;
+    cursor:pointer;
+    padding:0 24px;
+}
+
+/* 行内元素转块内元素 否则加下底线出问题 */
+.menu-item a{
+    display:block;
+    color:#fff;
+    font-size:16px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    height:63px;
+    padding:0 8px;
+    position:relative;
+}
+
+.menu-item:last-child a{
+    border-bottom:none;
+}
+
+/* 内容栏目小箭头 定位变块元素置于右侧 */
+.menu-item i{
+    position:absolute;
+    right:25px;
+    top:2px;
+    color:rgba(255,255,255,0.5);
+    font-style:normal;
+    font-weight:normal;
+    font-family:"iconfont";
+    font-size:24px;
+}
+
+/* 子菜单 鼠标滑动内容栏目弹出 */
+.sub-menu{
+    width:730px;
+    height:458px;
+    position:absolute;
+    left:244px;
+    top:0;
+    background:#fff;
+    z-index:500;
+    border:1px solid #d9dde1;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 副级子菜单箱 */
+.inner-box{
+    width:100%;
+    height:100%;
+    background:url(../img/fe.png) no-repeat;
+}
+
+/* 栏目内容 */
+.sub-inner-box{
+    width:652px;
+    margin-left:40px;
+    overflow:hidden;
+}
+
+/* 栏目标题 */
+.title{
+    font-size:16px;
+    color:#f01414;
+    line-height:16px;
+    font-weight:bold;
+    margin:28px 0 30px 0;
+}
+
+/* 每行栏目隔开距离 */
+.sub-row{
+    margin-bottom:25px;
+}
+
+/* 栏目左侧描述加粗 */
+.bold{
+    font-weight:700;
+}
+
+/* 栏目左侧拉开和斜杆左右距离 复用 */
+.mr10{
+    margin-right:10px;
+}
+
+.ml10{
+    margin-left:10px;
+}
+
+.hide{
+    display:none;
+}
