@@ -6,6 +6,7 @@
 body{
     font-family:"微软雅黑";
     color:#14191e;
+    background-color: #333;;
 }
 
 a{
@@ -30,6 +31,7 @@ a:link,a:visited{
     height:460px;
     margin:30px auto;
     position:relative;
+    overflow:hidden;
 }
 
 /* 焦点图 */
@@ -46,6 +48,11 @@ a:link,a:visited{
     float:left;
     overflow:hidden;
     background-repeat:no-repeat;
+    display:none;
+}
+
+.slide-active{
+    display:block;
 }
 
 /* 焦点图图片 */
@@ -71,6 +78,12 @@ a:link,a:visited{
     margin-top:-40px;
     background:url(../img/arrow.png) center center no-repeat;
     transform:rotate(180deg);
+}
+
+.button:hover{
+    background-color:#333;
+    opacity:0.8;
+    filter:alpha(opacity=80);   
 }
 
 .next{
@@ -178,6 +191,7 @@ a:link,a:visited{
     width:100%;
     height:100%;
     background:url(../img/fe.png) no-repeat;
+    display:none;
 }
 
 /* 栏目内容 */
@@ -217,4 +231,13 @@ a:link,a:visited{
 
 .hide{
     display:none;
+}
+
+.message{
+    background:url(../img/me.jpg) center center no-repeat;
+    width:195px;
+    height:195px;
+    border-radius:50%;
+    border:1px solid #fff;
+    margin:20px auto;
 }
